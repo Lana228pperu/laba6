@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Informers</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#fff;
+  margin:0;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  font-weight:normal;
+  margin:30px 0;
+}
+
+.box{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.card{
+  background:#fff;
+  box-shadow:0 0 15px rgba(0,0,0,.25);
+  padding:10px;
+}
+
+/* Time */
+.time{
+  width:300px;
+  background:#ff8b8b;
+}
+
+/* News */
+.news{
+  width:600px;
+  font-size:13px;
+}
+
+/* Anecdotes */
+.anec{
+  width:260px;
+}
+
+.anec a{
+  display:block;
+  margin-top:10px;
+  text-decoration:none;
+  color:#1a0dab;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Informers</h1>
+
+<div class="box">
+
+  <!-- SINOPTIK -->
+  <div class="card" style="width:240px">
+    <div id="SinoptikInformer" style="width:240px;" class="SinoptikInformer type1c">
+      <a href="https://ua.sinoptik.ua/" target="_blank">Погода</a>
+      <script src="//sinoptik.ua/informers_js.php?title=4&wind=3&cities=303010783,303014487&lang=ua"></script>
+    </div>
+  </div>
+
+  <!-- MINFIN -->
+  <div class="card">
+    <iframe
+      src="https://informer.minfin.com.ua/ua/gen/region/32/?color=yellow"
+      width="275"
+      height="120"
+      frameborder="0">
+    </iframe>
+  </div>
+
+  <!-- TIME -->
+  <div class="card time">
+    <a href="https://time.is/Lviv" target="_blank" style="font-size:26px">Львів:</a><br><br>
+    <span id="Lviv_z713" style="font-size:22px"></span>
+
+    <script src="https://widget.time.is/ru.js"></script>
+    <script>
+      time_is_widget.init({
+        Lviv_z713:{
+          template:"TIME<br>DATE<br>SUN",
+          coords:"49.83826,24.02324"
+        }
+      });
+    </script>
+  </div>
+
+  <!-- PETROL -->
+  <div class="card">
+    <a id="vseazs_informer"></a>
+    <script src="https://vseazs.com/inf.php?reg=9&fuels=11110111"></script>
+  </div>
+
+</div>
+
+<div class="box">
+
+  <!-- NEWS -->
+  <div class="card news">
+    <a href="http://www.profinance.ru/" target="_blank" style="font-weight:bold">
+      Новини економіки
+    </a><br><br>
+    <script src="//informers.forexpf.ru/export/economic.js"></script>
+  </div>
+
+  <!-- ANECDOTES -->
+  <div class="card anec">
+    <b>Богатир — це той, хто тирить у богатих?</b>
+    <div id="allanekdots"></div>
+    <a href="https://allanekdots.ru/" target="_blank">Свежие анекдоты</a>
+    <script src="https://allanekdots.ru/widgets/allanekdots.js?n=2"></script>
+  </div>
+
+</div>
+
+<h1>Facebook plug-in</h1>
+
+<div class="box">
+  <iframe
+    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/departmentCAD/&tabs=timeline&width=500&height=500"
+    width="500"
+    height="500"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0">
+  </iframe>
+</div>
+
+</body>
+</html>
